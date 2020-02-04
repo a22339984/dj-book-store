@@ -5,3 +5,5 @@ from .models import Book
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
     list_display = ("name","price")
+    search_fields = ('name', 'description')
+    list_filter = ('is_online',)
